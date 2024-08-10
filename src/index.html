@@ -4,21 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Search Images</title>
+
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <load ="partials/header.html" />
-
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
-
-    <script type="module" src="./main.js"></script>
+    <form class="search-form" id="search-form">
+      <input
+        class="search-input"
+        type="text"
+        id="searchInput"
+        name="query"
+        placeholder="Search images..."
+      />
+      <button type="submit" class="submit-btn">Search</button>
+    </form>
+    <div class="loader" style="display: none">
+      Loading images, please wait...
+    </div>
+    <ul class="gallery" id="gallery"></ul>
+    <button id="load-more" style="display: none" class="btn-more">
+      Load more
+    </button>
   </body>
+  <script type="module" src="./main.js"></script>
 </html>
